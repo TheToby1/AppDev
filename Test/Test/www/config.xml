@@ -6,7 +6,7 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>Fuck Rob</name>
+    <name>Calculator</name>
 
     <description>
         Does exactly what it says on the tin.
