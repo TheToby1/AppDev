@@ -12,35 +12,42 @@
 	<body>
 		<table>
 			<tr>
-				<td colspan="4">Numbers</td>
+				<td colspan="4" id="numdisplay"></td>
 			</tr>
 			<tr>
 				<td colspan="2"><button type="button" value = "clear">A/C</button></td>
 				<td colspan="2"><button type="button" value = "del">DEL</button></td>
 			</tr>
 			<tr>
-				<td><button type="button" value = "7">7</button></td>
-				<td><button type="button" value = "8">8</button></td>
-				<td><button type="button" value = "9">9</button></td>
-				<td><button type="button" value = "divi">/</button></td>
+				<td><button type="button" value = "7" onclick="displaynum(7);">7</button></td>
+				<td><button type="button" value = "8" onclick="displaynum(8);">8</button></td>
+				<td><button type="button" value = "9" onclick="displaynum(9);">9</button></td>
+				<td><button type="button" value = "divi" onclick="displaynum('/');">/</button></td>
 			</tr>
 			<tr>
-				<td><button type="button" value = "4">4</button></td>
-				<td><button type="button" value = "5">5</button></td>
-				<td><button type="button" value = "6">6</button></td>
-				<td><button type="button" value = "mult">*</button></td>
+				<td><button type="button" value = "4" onclick="displaynum(4);">4</button></td>
+				<td><button type="button" value = "5" onclick="displaynum(5);">5</button></td>
+				<td><button type="button" value = "6" onclick="displaynum(6);">6</button></td>
+				<td><button type="button" value = "mult" onclick="displaynum('*');">*</button></td>
 			</tr>
 			<tr>
-				<td><button type="button" value = "1">1</button></td>
-				<td><button type="button" value = "2">2</button></td>
-				<td><button type="button" value = "3">3</button></td>
-				<td><button type="button" value = "minu">-</button></td>
+				<td><button type="button" value = "1" onclick="displaynum(1);">1</button></td>
+				<td><button type="button" value = "2" onclick="displaynum(2);">2</button></td>
+				<td><button type="button" value = "3" onclick="displaynum(3);">3</button></td>
+				<td><button type="button" value = "minu" onclick="displaynum('-');">-</button></td>
 			</tr>
 			<tr>
-				<td><button type="button" value = "point">.</button></td>
-				<td><button type="button" value = "0">0</button></td>
+				<td><button type="button" value = "point" onclick="displaynum('.');">.</button></td>
+				<td><button type="button" value = "0" onclick="displaynum(0);">0</button></td>
 				<td><button type="button" value = "equal">=</button></td>
-				<td><button type="button" value = "plus">+</button></td>
+				<td><button type="button" value = "plus" onclick="displaynum('+');">+</button></td>
 			</tr>
+			<script>
+				function displaynum(value){
+				var display = document.getElementById("numdisplay");
+				//alert('YAY!');
+				display.innerHTML = display.innerHTML + value;
+				}			
+			</script>
 	</body>
 </html>
