@@ -1,4 +1,4 @@
-body{
+html, body{
 	height:100%;
 }
 table {
@@ -9,7 +9,4 @@ table {
     padding:0px;
     text-transform:uppercase;
     width:100%;
-}
-table tr{
-	height:33%;
 }
