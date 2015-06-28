@@ -27,7 +27,10 @@ table {
 	max-height:100%;
 	max-width:100%;
 	overflow:hidden;
-	#direction:rtl;
+	direction:rtl;
+}
+#nd{
+	overflow:hidden;
 }
 button{
 	width:100%;
