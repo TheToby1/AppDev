@@ -41,3 +41,8 @@ button{
 	max-height:100%;
 	max-width:100%;
 }
+button:active {
+    background-color:#AAAAAA;
+	border-style:none;
+}
+button:focus {outline:0;}
