@@ -24,16 +24,14 @@ table {
 	height:16.666%;
 	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:5.5em;
-	max-height:100%;
+	max-height:16.666%;
 	max-width:100%;
 	overflow:scroll;
 	direction:rtl;
+	white-space:nowrap;
 }
 ::-webkit-scrollbar { 
     display: none; 
-}
-#nd{
-	overflow:hidden;
 }
 button{
 	width:100%;
@@ -41,8 +39,6 @@ button{
 	border-style:none;
 	font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
     font-size:5em;
-	max-height:100%;
-	max-width:100%;
 }
 button:active {
     background-color:#AAAAAA;
