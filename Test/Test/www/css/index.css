@@ -26,8 +26,11 @@ table {
     font-size:5em;
 	max-height:100%;
 	max-width:100%;
-	overflow:hidden;
+	overflow:scroll;
 	direction:rtl;
+}
+::-webkit-scrollbar { 
+    display: none; 
 }
 #nd{
 	overflow:hidden;
