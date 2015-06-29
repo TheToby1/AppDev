@@ -227,7 +227,6 @@ function dosum(){
 					//alert(value1);
 				}
 			}
-			alert(value1);
 			for(j=i-1;j>-1;j--){
 				if(j==0){
 					value2 = new BigNumber(str1.substring(j,i));
@@ -244,11 +243,9 @@ function dosum(){
 					//alert(value2);
 				}
 			}
-			alert(value2);
 			ans = value2.minus(value1);
 			str1 = str1.substring(0,start) + ans + str1.substring(end);
 			//alert('next2min');
-			alert(str1);
 			i=0;
 		}
 	}
