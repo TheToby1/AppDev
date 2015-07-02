@@ -1,7 +1,12 @@
 var deci = 0;
+var matherror = 0;
 function displaynum(value){
 	var display = document.getElementById("nd");
 	var str1 = display.innerHTML;
+	if(matherror == 1){
+		str1="";
+		matherror=0;
+	}
 	//alert(typeof str1);
 	if(value=="-"|value=="+"){
 		deci = 0;
@@ -42,6 +47,7 @@ function displaynum(value){
 	//alert(display.innerHTML);
 }
 function clearall(){
+	matherror = 0;
 	deci = 0;
 	var display = document.getElementById("nd");
 	display.innerHTML = '';
@@ -49,6 +55,10 @@ function clearall(){
 function backspace(){
 	var display = document.getElementById("nd");
 	var str1 = display.innerHTML;
+	if(matherror == 1){
+		str1="";
+		matherror=0;
+	}
 	var char1 = str1.charAt(str1.length - 1);
 	if(char1=="."){
 		deci = 0;
@@ -83,6 +93,10 @@ function backspace(){
 	display.innerHTML = str1.substring(0, str1.length-1);
 }
 function dosum(){
+	if(matherror == 1){
+		str1="";
+		matherror=0;
+	}
 	var display = document.getElementById("nd");
 	var str1 = display.innerHTML;
 	var value1= new BigNumber("0");
@@ -250,8 +264,12 @@ function dosum(){
 		}
 	}
 	//alert(str1);
-	display.innerHTML = str1;
 	for(i=0;i<str1.length;i++){
+		if(str1.charAt(i)=="*"|str1.charAt(i)=="+"|str1.charAt(i)=="-"|str1.charAt(i)=="/"|str1.charAt(i)=="i"){
+			str1 = "MATH ERROR";
+			matherror=1;
+			deci = 0;
+		}
 		if(str1.charAt(i)=="."){
 			deci = 1;
 			i = str1.length;
@@ -260,4 +278,6 @@ function dosum(){
 			deci=0;
 		}
 	}
+	display.innerHTML = str1;
+	
 }
