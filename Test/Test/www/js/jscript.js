@@ -266,7 +266,7 @@ function dosum(){
 		}
 		//alert(str1);
 		for(i=0;i<str1.length;i++){
-			if(str1.charAt(i)=="i"){
+			if(str1.charAt(i)=="i"|str1.charAt(i)=="N"){
 			str1 = "MATH ERROR";
 			matherror=1;
 			deci = 0;
